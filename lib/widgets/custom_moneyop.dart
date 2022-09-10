@@ -1,6 +1,8 @@
 import 'package:fincrypt/widgets/custom_button_moneyop.dart';
 import 'package:flutter/material.dart';
 
+import 'custom_buildsheet.dart';
+
 class MoneyOperationsBox extends StatelessWidget {
   const MoneyOperationsBox({Key? key}) : super(key: key);
 
@@ -26,7 +28,13 @@ class MoneyOperationsBox extends StatelessWidget {
               crossAxisAlignment: CrossAxisAlignment.center,
               children: [
                 Button(
-                    onTap: () => {},
+                    onTap: () => showModalBottomSheet(
+                        context: context,
+                        enableDrag: false,
+                        shape: RoundedRectangleBorder(
+                            borderRadius: BorderRadius.vertical(
+                                top: Radius.circular(20))),
+                        builder: (context) => buildSheet()),
                     icon: Icons.add,
                     color: Color.fromRGBO(224, 237, 253, 1),
                     Iconcolor: Colors.blue,
