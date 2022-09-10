@@ -3,15 +3,20 @@ import 'package:flutter/material.dart';
 class ListBox extends StatelessWidget {
   final List<String> transactions;
   final List<int> amount;
-  const ListBox({Key? key, required this.transactions, required this.amount})
-      : super(key: key);
+  final double heightNum;
+  const ListBox({
+    Key? key,
+    required this.transactions,
+    required this.amount,
+    required this.heightNum,
+  }) : super(key: key);
 
   @override
   Widget build(BuildContext context) {
     final width = MediaQuery.of(context).size.width;
     final height = MediaQuery.of(context).size.height;
     return Container(
-      height: height / 3.8,
+      height: height / heightNum,
       width: width - 50,
       decoration: BoxDecoration(
         color: Colors.white,
