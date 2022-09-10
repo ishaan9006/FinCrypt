@@ -90,23 +90,20 @@ class _CustomBalanceBoxState extends State<CustomBalanceBox> {
                     ),
                   ],
                 ),
-                Padding(
-                  padding: const EdgeInsets.only(right: 6),
-                  child: Row(
-                    children: [
-                      Text(
-                        'INR',
-                        style: TextStyle(
-                            color: Colors.blue,
-                            fontSize: 15,
-                            fontWeight: FontWeight.w500),
-                      ),
-                      Icon(
-                        Icons.arrow_drop_down_rounded,
-                        color: Colors.blue,
-                      )
-                    ],
-                  ),
+                Row(
+                  children: [
+                    Text(
+                      'INR',
+                      style: TextStyle(
+                          color: Colors.blue,
+                          fontSize: 15,
+                          fontWeight: FontWeight.w500),
+                    ),
+                    Icon(
+                      Icons.arrow_drop_down_rounded,
+                      color: Colors.blue,
+                    )
+                  ],
                 ),
               ],
             ),
